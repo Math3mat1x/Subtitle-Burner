@@ -1,7 +1,3 @@
-#Args: ./convert.sh <file glob> <output folder>
-#To only way to manage it to work is to use this "./script.sh \* output"
-#This will convert every video in the current folder and write them to "output" folder in the current folder...
-
 for filename in ${1}; do
         if [ ! -d "${2}" ]; then
                 mkdir -p ${2}
@@ -25,8 +21,4 @@ with ISO-8859-1
         echo "Subtitle format : $subtitle_format"
         ffmpeg -hwaccel cuvid -i "${filename}" -vf subtitles="'${sub_file}'":charenc="'${subtitle_format}'" -c:v nvenc "${2}${name_no_extension}2.mp4"
 
-
-	
-#ffmpeg -i "${filename} -vf "subtitles='${name_no_extension].srt'":charenc="$subtitle_format",scale=720:-1 -c:v m
-#peg4 -q:v 0 -tag:v DIVX -c:a libmp3lame -q:a 0 -ac 2 -ar 44100 "${2}/${name_no_extension}.avi"
 done
