@@ -5,4 +5,4 @@ You need to have an nvida graphic card that supports CUDA. You also need to comp
 Your subtitles have to be *.srt and have the same prefix as the video name. 
 ## Usage
 This is a very simple, yet useful program. Simply run this command:
-''./subtitle video.mp4
+''./subtitle video.mp4''
