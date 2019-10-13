@@ -14,8 +14,7 @@ for filename in ${1}; do
         if [ ${subtitle_format} == "utf-8" ]; then # if it's not UTF-8, then it's CP1252
                 subtitle_format="UTF-8"
         else    
-                subtitle_format="CP1252" # should work with anything that isn't UTF-8 encoded. The format is compatible 
-with ISO-8859-1
+                subtitle_format="CP1252" # should work with anything that isn't UTF-8 encoded. The format is compatible with ISO-8859-1
         fi      
         
         echo "Subtitle format : $subtitle_format"
